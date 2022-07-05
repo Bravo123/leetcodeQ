@@ -1,32 +1,29 @@
 name: 'Test & Lint'
 
-on: 
-  push: 
-    branches:
-      - main
+on:
+    push:
+        branches:
+            - main
 jobs:
-  Test-Lint-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🚀 starting actions"
+    Test-Lint-Actions:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "🚀 starting actions"
 
-      - name: Check out code
-        uses: actions/checkout@v3
+            - name: Check out code
+              uses: actions/checkout@v3
 
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+            - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
 
-      - name: Setup node
-        uses: actions/setup-node@v3
-        registry-url: https://registry.npm.taobao.org
-        with:
-          node-version: 16.6.2
-          cache: npm
+            - name: Setup node
+              uses: actions/setup-node@v3
+              registry-url: https://registry.npm.taobao.org
+              with:
+                  node-version: 16.6.2
+                  cache: npm
 
-      - name: Install
-        run: npm i
+            - name: Install
+              run: npm i
 
-      - name: Eslint job
-        run: npm run eslint
-
-      
-      
+            - name: Eslint job
+              run: npm run eslint
