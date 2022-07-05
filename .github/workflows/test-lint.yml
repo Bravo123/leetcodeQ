@@ -17,9 +17,9 @@ jobs:
 
             - name: Setup node
               uses: actions/setup-node@v3
-              registry-url: https://registry.npm.taobao.org
               with:
                   node-version: 16.6.2
+                  registry-url: https://registry.npm.taobao.org
                   cache: npm
 
             - name: Install
