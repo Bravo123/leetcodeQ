@@ -1,9 +1,11 @@
 interface A {
-    a: string;
+    a: string
 }
 
-const res:A = {
+const res: A = {
     a: '123'
 }
 
-console.log(res?.a);
+const a = 1
+
+console.log(res?.a)
