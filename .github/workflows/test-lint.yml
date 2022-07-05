@@ -3,7 +3,7 @@ name: 'Test & Lint'
 on:
     push:
         branches:
-            - main
+            - master
 jobs:
     Test-Lint-Actions:
         runs-on: ubuntu-latest
